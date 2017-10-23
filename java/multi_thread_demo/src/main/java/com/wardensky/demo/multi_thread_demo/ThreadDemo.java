@@ -11,17 +11,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-public class ThreadPoolTest implements Runnable, Serializable {
+public class ThreadDemo implements Runnable, Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	public ThreadPoolTest(String task) {
+	public ThreadDemo(String task) {
 		System.out.println(task);
 	}
 
 	public void run() {
-		String urlStr = "http://192.168.163.66:8080/index!login";
-
+		String urlStr = "http://www.baidu.com";
 		Map<String, String> params = new HashMap<String, String>();
 		params.put("userName", "admin");
 		params.put("password", "670b14728ad9902aecba32e22fa4f6bd");
