@@ -1,13 +1,12 @@
 package com.wardensky.wordpresshelper;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
+import com.wardensky.wordpresshelper.model.Wpposts;
+
+public class App {
+	public static void main(String[] args) {
+		HhtdJfinalConfig config = new HhtdJfinalConfig();
+		config.start();
+	 
+		Wpposts.DAO.addVideo("可可和爷爷在商场玩气球","http://7.happykeke.top/video_可可和爷爷在商场.mp4");
+	}
 }
