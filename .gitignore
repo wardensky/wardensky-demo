@@ -1,5 +1,7 @@
 # Compiled class file
 *.class
+.project
+.setting
 
 # Log file
 *.log
@@ -22,3 +24,21 @@
 hs_err_pid*
 target/
 
+# ide settings #
+org.eclipse.core.resources.prefs
+org.eclipse.jdt.core.prefs
+org.eclipse.m2e.core.prefs
+org.eclipse.wst.common.component
+org.eclipse.wst.common.project.facet.core.xml
+org.eclipse.wst.jsdt.ui.superType.container
+org.eclipse.wst.jsdt.ui.superType.name
+org.eclipse.wst.validation.prefs
+.classpath
+MANIFEST.MF
+META-INF/
+.settings/
+.vscode/
+/webapp/WEB-INF/target/
+/webapp/WEB-INF/classes/
+.metadata/
+RemoteSystemsTempFiles/
