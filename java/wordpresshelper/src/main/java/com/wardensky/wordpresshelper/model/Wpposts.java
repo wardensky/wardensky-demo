@@ -10,7 +10,7 @@ import com.jfinal.plugin.activerecord.Model;
 
 @TableBind(pkName = "ID", tableName = "wp_posts")
 public class Wpposts extends Model<Wpposts> implements IBean {
-	private final String TABLE_NAME = "wp_posts";
+	public static final String TABLE_NAME = "wp_posts";
 	private static final long serialVersionUID = 1L;
 	public static final Wpposts DAO = new Wpposts();
 
@@ -142,11 +142,11 @@ public class Wpposts extends Model<Wpposts> implements IBean {
 		return get("post_modified_gmt");
 	}
 
-	public void setContentFiltered(String p) {
+	public void setPostContentFiltered(String p) {
 		set("post_content_filtered", p);
 	}
 
-	public String getContentFiltered() {
+	public String getPostContentFiltered() {
 		return get("post_content_filtered");
 	}
 

@@ -11,26 +11,24 @@ import com.jfinal.config.Interceptors;
 import com.jfinal.config.JFinalConfig;
 import com.jfinal.config.Plugins;
 import com.jfinal.config.Routes;
-import com.jfinal.ext.plugin.tablebind.AutoTableBindPlugin;
-import com.jfinal.ext.plugin.tablebind.SimpleNameStyles;
 import com.jfinal.kit.PropKit;
 import com.jfinal.log.Logger;
 import com.jfinal.plugin.IPlugin;
+import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.c3p0.C3p0Plugin;
 import com.jfinal.template.Engine;
+import com.wardensky.wordpresshelper.model.Wpposts;
 
-public class HhtdJfinalConfig extends JFinalConfig {
+public class MyJfinalConfig extends JFinalConfig {
 	private static final Plugins plugins = new Plugins();
 	private static final Constants constants = new Constants();
-	protected static final Logger logger = Logger.getLogger(HhtdJfinalConfig.class);
-
-	private String filter = "main";
+	protected static final Logger logger = Logger.getLogger(MyJfinalConfig.class);
 
 	public void start() {
 
 		PropertyConfigurator.configure(getLog4jFile());
- 		String file = getConfigFile();
- 		PropKit.use(file);
+		String file = getConfigFile();
+		PropKit.use(file);
 		this.configConstant(constants);
 		this.configPlugin(plugins);
 		startPlugins();
@@ -110,20 +108,33 @@ public class HhtdJfinalConfig extends JFinalConfig {
 	public void configEngine(Engine me) {
 	}
 
-	@Override
-	public void configPlugin(Plugins me) {
+	private C3p0Plugin addLocal() {
 		String jdbcUrl = "jdbc:mysql://127.0.0.1:3306/wordpress?zeroDateTimeBehavior=convertToNull&&autoReconnect=true";
 		String user = "root";
 		String password = "hhtdpwd";
-		C3p0Plugin cp = new C3p0Plugin(jdbcUrl, user, password);
+		return new C3p0Plugin(jdbcUrl, user, password);
+	}
 
-		AutoTableBindPlugin atbp = new AutoTableBindPlugin(this.filter, cp, SimpleNameStyles.LOWER_UNDERLINE);
-		// atbp.jarFilter("hhtd");
-		atbp.setShowSql(true);
-		// atbp.addExcludeClasses(BaseModel.class);
-		atbp.includeAllJarsInLib(true);
-		me.add(cp);
-		me.add(atbp);
+	private C3p0Plugin addRemote() {
+		String jdbcUrl = "jdbc:mysql://rds5ned061q99i7i87qp.mysql.rds.aliyuncs.com/ry9oq3gm6l?zeroDateTimeBehavior=convertToNull&&autoReconnect=true";
+		String user = "ry9oq3gm6l";
+		String password = "chZHAO07";
+		return new C3p0Plugin(jdbcUrl, user, password);
+	}
+
+	@Override
+	public void configPlugin(Plugins me) {
+		C3p0Plugin localC = this.addLocal();
+		C3p0Plugin remoteC = this.addRemote();
+		ActiveRecordPlugin local = new ActiveRecordPlugin("local", localC);
+		ActiveRecordPlugin remote = new ActiveRecordPlugin("remote", remoteC);
+		me.add(localC);
+		me.add(remoteC);
+		me.add(local);
+		me.add(remote);
+
+		local.addMapping("wp_posts", Wpposts.class);
+		remote.addMapping("wp_posts", Wpposts.class);
 	}
 
 	@Deprecated
