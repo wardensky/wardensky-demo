@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B7E4A21D-2ADF-4494-9E5E-C90DBD08F7CD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Wims.Common</RootNamespace>
+    <AssemblyName>Wims.Common</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Apache.NMS">
+      <HintPath>..\Lib\Apache.NMS.dll</HintPath>
+    </Reference>
+    <Reference Include="Apache.NMS.ActiveMQ">
+      <HintPath>..\Lib\Apache.NMS.ActiveMQ.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\Lib\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging.Log4Net">
+      <HintPath>..\Lib\Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Bson">
+      <HintPath>..\Lib\MongoDB.Bson.dll</HintPath>
+    </Reference>
+    <Reference Include="MongoDB.Driver">
+      <HintPath>..\Lib\MongoDB.Driver.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Wisdombud.Mongo">
+      <HintPath>..\Lib\Wisdombud.Mongo.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveMQUtil\MqBase.cs" />
+    <Compile Include="ActiveMQUtil\MqConsumerBase.cs" />
+    <Compile Include="ActiveMQUtil\MqConsumerTopic.cs" />
+    <Compile Include="ActiveMQUtil\MqProducerBase.cs" />
+    <Compile Include="ActiveMQUtil\MqProducerTopic.cs" />
+    <Compile Include="Entity\BaseEntity.cs" />
+    <Compile Include="GlobalValues.cs" />
+    <Compile Include="MongoDBUtil\MongoDbBaseDao.cs" />
+    <Compile Include="MongoDBUtil\MongoUtil.cs" />
+    <Compile Include="ActiveMQUtil\MqConsumerQueue.cs" />
+    <Compile Include="ActiveMQUtil\MqProducerQueue.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FormBaseNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Entity\RowEntity.cs" />
+    <Compile Include="UI\FormCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UCBaseNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UCRowComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UCRowDateTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UCRowTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\UCSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\WimsGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\WimsToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="QueryableExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FormBaseNew.resx">
+      <DependentUpon>FormBaseNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UCBaseNew.resx">
+      <DependentUpon>UCBaseNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UCRowComboBox.resx">
+      <DependentUpon>UCRowComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UCRowDateTime.resx">
+      <DependentUpon>UCRowDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UCRowTextBox.resx">
+      <DependentUpon>UCRowTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UCSearch.resx">
+      <DependentUpon>UCSearch.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\查看.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\报告.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删 除.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删 除1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\设备.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\添加.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\文件夹 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\修改 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\修改.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\选择.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\增加.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

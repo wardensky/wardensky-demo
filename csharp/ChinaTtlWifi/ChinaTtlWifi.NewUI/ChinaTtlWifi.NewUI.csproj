@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D13A7677-D342-439C-9A8C-48943B8E3C9F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChinaTtlWifi.NewUI</RootNamespace>
+    <AssemblyName>ChinaTtlWifi.NewUI</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>发布\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Apache.NMS, Version=1.7.1.3894, Culture=neutral, PublicKeyToken=82756feee3957618, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Apache.NMS.dll</HintPath>
+    </Reference>
+    <Reference Include="Apache.NMS.ActiveMQ, Version=1.7.2.4108, Culture=neutral, PublicKeyToken=82756feee3957618, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\Apache.NMS.ActiveMQ.dll</HintPath>
+    </Reference>
+    <Reference Include="Aspose.Cells">
+      <HintPath>..\Lib\Aspose.Cells.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2">
+      <HintPath>..\Lib\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\DevExpress.Data.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\DevExpress.Utils.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\DevExpress.XtraEditors.v14.1.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\HtmlRenderer 1.5.0.6\Core\NET40\HtmlRenderer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlRenderer.WinForms, Version=1.5.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\HtmlRenderer 1.5.0.6\WinForms\NET40\HtmlRenderer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MqUtil, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\MqUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WHC.Pager.Entity">
+      <HintPath>..\Lib\WHC.Pager.Entity.dll</HintPath>
+    </Reference>
+    <Reference Include="WHC.Pager.WinControlEx">
+      <HintPath>..\Lib\WHC.Pager.WinControlEx.dll</HintPath>
+    </Reference>
+    <Reference Include="Wims.Mili.AOP">
+      <HintPath>..\Lib\Wims.Mili.AOP.dll</HintPath>
+    </Reference>
+    <Reference Include="Wisdombud.BLL">
+      <HintPath>..\Lib\Wisdombud.BLL.dll</HintPath>
+    </Reference>
+    <Reference Include="Wisdombud.Mongo">
+      <HintPath>..\Lib\Wisdombud.Mongo.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAbout.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout.Designer.cs">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAgentManual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAgentManual.Designer.cs">
+      <DependentUpon>FormAgentManual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyGridViewNew.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyGridViewNew.Designer.cs">
+      <DependentUpon>MyGridViewNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SysWaitForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SysWaitForm.designer.cs">
+      <DependentUpon>SysWaitForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCTestBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTestCaseStatus.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTestLog.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTestResult.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTestResultShow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCTestResultShow.Designer.cs">
+      <DependentUpon>UCTestResultShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试例管理\FormTestCaseSelect.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试参数管理\FormParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试参数管理\FormParam.Designer.cs">
+      <DependentUpon>FormParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试参数管理\FormParamCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试参数管理\FormParamNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试参数管理\FormParamNew.Designer.cs">
+      <DependentUpon>FormParamNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试命令管理\FormCommandCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHelper.cs" />
+    <Compile Include="测试数据管理\FormExportSingleData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试数据管理\FormExportSingleData.Designer.cs">
+      <DependentUpon>FormExportSingleData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试结果管理\FormResultShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试结果管理\FormResultShow.Designer.cs">
+      <DependentUpon>FormResultShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试结果管理\FormTestResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试项目管理\FormCaseDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试项目管理\FormCaseDevice.Designer.cs">
+      <DependentUpon>FormCaseDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试项目管理\FormProjectParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试项目管理\FormProjectParam.Designer.cs">
+      <DependentUpon>FormProjectParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试项目管理\FormProjectParamCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试项目管理\FormProjectParamNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试项目管理\FormProjectParamNew.Designer.cs">
+      <DependentUpon>FormProjectParamNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试项目管理\FormProjectCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试项目管理\FormProjectNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试项目管理\FormProjectNew.Designer.cs">
+      <DependentUpon>FormProjectNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试例管理\FormTestCaseNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试例管理\FormTestCaseNew.Designer.cs">
+      <DependentUpon>FormTestCaseNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试例管理\FormTestCaseCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试设备管理\FormTestDeviceNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试项目管理\FormStepDevice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试项目管理\FormStepDevice.Designer.cs">
+      <DependentUpon>FormStepDevice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试项目管理\FormProjectStepNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试项目管理\FormProjectTestCaseCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试项目管理\FormProjectTestCaseNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试项目管理\FormProjectTestCaseNew.Designer.cs">
+      <DependentUpon>FormProjectTestCaseNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试项目管理\UCProjectCase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="测试项目管理\UCProjectCase.Designer.cs">
+      <DependentUpon>UCProjectCase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试项目管理\UCProjectInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="测试项目管理\UCProjectInfo.Designer.cs">
+      <DependentUpon>UCProjectInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="被测设备管理\FormDutCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试命令管理\FormCommandNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="被测设备管理\FormDutNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试例管理\FormStepNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试设备管理\FormTestDeviceCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="测试环境管理\FormTestRoomCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="测试环境管理\FormTestRoomNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAbout.resx">
+      <DependentUpon>FormAbout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAgentManual.resx">
+      <DependentUpon>FormAgentManual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SysWaitForm.resx">
+      <DependentUpon>SysWaitForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTestCaseStatus.resx">
+      <DependentUpon>UCTestCaseStatus.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTestLog.resx">
+      <DependentUpon>UCTestLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTestResult.resx">
+      <DependentUpon>UCTestResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCTestResultShow.resx">
+      <DependentUpon>UCTestResultShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试例管理\FormTestCaseCrud.resx">
+      <DependentUpon>FormTestCaseCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试参数管理\FormParam.resx">
+      <DependentUpon>FormParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试命令管理\FormCommandCrud.resx">
+      <DependentUpon>FormCommandCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试数据管理\FormExportSingleData.resx">
+      <DependentUpon>FormExportSingleData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试环境管理\FormTestRoomCrud.resx">
+      <DependentUpon>FormTestRoomCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试结果管理\FormResultShow.resx">
+      <DependentUpon>FormResultShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试结果管理\FormTestResult.resx">
+      <DependentUpon>FormTestResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试项目管理\FormCaseDevice.resx">
+      <DependentUpon>FormCaseDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试项目管理\FormProjectParam.resx">
+      <DependentUpon>FormProjectParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试项目管理\FormStepDevice.resx">
+      <DependentUpon>FormStepDevice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试项目管理\FormProjectTestCaseCrud.resx">
+      <DependentUpon>FormProjectTestCaseCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试项目管理\FormProjectTestCaseNew.resx">
+      <DependentUpon>FormProjectTestCaseNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试项目管理\UCProjectCase.resx">
+      <DependentUpon>UCProjectCase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试项目管理\UCProjectInfo.resx">
+      <DependentUpon>UCProjectInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="被测设备管理\FormDutCrud.resx">
+      <DependentUpon>FormDutCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试项目管理\FormProjectCrud.resx">
+      <DependentUpon>FormProjectCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试项目管理\FormProjectNew.resx">
+      <DependentUpon>FormProjectNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试例管理\FormTestCaseNew.resx">
+      <DependentUpon>FormTestCaseNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="测试设备管理\FormTestDeviceCrud.resx">
+      <DependentUpon>FormTestDeviceCrud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChinaTtlWifi.IAgent\ChinaTtlWifi.IAgent.csproj">
+      <Project>{7cd0c057-b03d-4bd9-ac7e-c456acf8aac8}</Project>
+      <Name>ChinaTtlWifi.IAgent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaTtlWifi.NewBll\ChinaTtlWifi.NewBll.csproj">
+      <Project>{f146e618-c327-4c52-9396-d3b1a3083421}</Project>
+      <Name>ChinaTtlWifi.NewBll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaTtlWifi.NewEntity\ChinaTtlWifi.NewEntity.csproj">
+      <Project>{1cd9fc5f-4930-495d-b27e-62a76428a922}</Project>
+      <Name>ChinaTtlWifi.NewEntity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonConfig\CommonConfig.csproj">
+      <Project>{24c368c8-25c9-4522-ae31-5bd1cdb6b286}</Project>
+      <Name>CommonConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MqUtil\MqUtil.csproj">
+      <Project>{48cebaaa-637d-4bd3-a101-7b51ad12f2ab}</Project>
+      <Name>MqUtil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wims.Common\Wims.Common.csproj">
+      <Project>{b7e4a21d-2adf-4494-9e5e-c90dbd08f7cd}</Project>
+      <Name>Wims.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\报告.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删 除.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\删 除1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\设备.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\添加.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\文件夹 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\修改.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\修改 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\选择.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\增加.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="log4net.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

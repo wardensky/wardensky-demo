@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+  <action id="1" name="初始化AP" waitresponse="true" breakOnFail="true">
+    <predelay>100</predelay>
+    <command>InitApConfig</command>
+    <postdelay>0</postdelay>
+  </action>
+  <action id="2" name="吞吐量测试" waitresponse="true" breakOnFail="true">
+    <predelay>0</predelay>
+    <command>CHECK_BEACON</command>
+    <postdelay>0</postdelay>
+  </action>
+  <action id="3" name="设置WirelessMode" waitresponse="true" breakOnFail="true" >
+    <predelay>0</predelay>
+    <command>ModifyWirelessMode</command>
+    <postdelay>0</postdelay>
+  </action>
+  <action id="4" name="上站" waitresponse="true" breakOnFail="true" >
+    <predelay>0</predelay>
+    <command>UpStation</command>
+    <postdelay>0</postdelay>
+  </action>
+  <action id="5" name="抓取Association Request包" waitresponse="true" breakOnFail="true" >
+    <predelay>0</predelay>
+    <command>Association_Request</command>
+    <postdelay>0</postdelay>
+  </action>
+  <action id="6" name="Ping查看丢包率" waitresponse="true" breakOnFail="true" >
+    <predelay>0</predelay>
+    <command>Ping</command>
+    <postdelay>0</postdelay>
+  </action>
+  <action id="7" name="测试吞吐量" waitresponse="true" breakOnFail="true" >
+    <predelay>0</predelay>
+    <command>TestThroughput</command>
+    <postdelay>0</postdelay>
+  </action>
+  <action id="8" name="sniffer检查有没有数据帧" waitresponse="true" breakOnFail="true" >
+    <predelay>0</predelay>
+    <command>CHECK_DATA</command>
+    <postdelay>0</postdelay>
+  </action>
+  <action id="9" name="检查吞吐量结果" waitresponse="true" breakOnFail="true" >
+    <predelay>0</predelay>
+    <command>AnalysisResult</command>
+    <postdelay>0</postdelay>
+  </action>
+</actions>

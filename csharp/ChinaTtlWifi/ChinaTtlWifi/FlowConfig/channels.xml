@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<channels>
+  <channel id="1" agentName="AGENT_STATION" description="this is a test"/>
+  <channel id="2" agentName="AGENT_JAVA" description="test3"/>
+  <channel id="3" agentName="AGENT_AP" description="这是控制ap的agent   "/>
+  <channel id="4" agentName="AGENT_TEST1" description="test1"/>
+</channels>

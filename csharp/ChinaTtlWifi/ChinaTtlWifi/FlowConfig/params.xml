@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ArrayOfParams>
+  <params id="1"  name="初始化AP参数" desc = "初始化AP参数">
+    <param id="1"  key ="ip" value="192.168.0.1"/>
+    <param id="2"  key ="user" value="admin"/>
+    <param id="3"  key ="password" value="admin"/>
+    <param id="4"  key ="apdown" value="apdown"/>
+    <param id="5"  key ="cfgCommand" value="cfg -x"/>
+    <param id="6"  key ="cfgCommand" value="cfg -a AP_CHMODE=11N"/>
+    <param id="8"  key ="cfgCommand" value="cfg -a AP_PRIMARY_CH=6"/>
+    <param id="9"  key ="cfgCommand" value="cfg -a AP_STARTMODE=standard"/>
+    <param id="10"  key ="cfgCommand" value="cfg -a AP_RADIO_ID=0"/>
+    <param id="11"  key ="cfgCommand" value="cfg -a AP_SSID=N-TEST"/>
+    <param id="12"  key ="cfgCommand" value="cfg -c"/>
+    <param id="13"  key ="apup" value="apup"/>
+  </params>
+  <params id="2"  name="CHECK_BEACON参数" desc = "mac地址">
+    <param id="1" key ="mac" value="00:90:4C:09:1D:8A"/>
+  </params>
+  <params id="3"  name="station参数配置" desc = "网卡无线模式">
+    <param id="1" key ="modeString" value="34"/>
+  </params>
+  <params id="4"  name="上站参数" desc = "上站参数">
+    <param id="1"  key ="ssid" value="hehe"/>
+    <param id="2"  key ="password" value="love123456"/>
+  </params>
+  <params id="5"  name="抓取AssociationRequest包" desc = "">
+    <param id="1"  key ="mac" value=""/>
+  </params>
+  <params id="6"  name="Ping查看丢包率" desc = "">
+    <param id="1"  key ="ip" value="127.0.0.1"/>
+    <param id="2"  key ="pingnum" value="5"/>
+  </params>
+  <params id="7"  name="测试吞吐量" desc = "">
+    <param id="1"  key ="param1" value="&quot;C:\Program Files\Ixia\IxChariot\runtst.exe&quot; 4.2.3-DT1.tst"/>
+    <param id="2"  key ="param2" value="&quot;C:\Program Files\Ixia\IxChariot\runtst.exe&quot; 4.2.3-DT2.tst"/>
+    <param id="3"  key ="param3" value="&quot;C:\Program Files\Ixia\IxChariot\runtst.exe&quot; 4.2.3-DT3.tst"/>
+    <param id="4"  key ="param4" value="&quot;C:\Program Files\Ixia\IxChariot\fmttst.exe&quot; 4.2.3-DT1.tst 4.2.3DT1.csv -V -s"/>
+    <param id="5"  key ="param5" value="&quot;C:\Program Files\Ixia\IxChariot\fmttst.exe&quot; 4.2.3-DT2.tst 4.2.3DT2.csv -V -s"/>
+    <param id="6"  key ="param6" value="&quot;C:\Program Files\Ixia\IxChariot\fmttst.exe&quot; 4.2.3-DT3.tst 4.2.3DT3.csv -V -s"/>
+  </params>
+  <params id="8"  name="sniffer检查有没有数据帧参数" desc = "mac地址">
+    <param id="1"  key ="mac1" value=""/>
+    <param id="2"  key ="mac2" value=""/>
+  </params>
+  <params id="9"  name="检查吞吐量测试结果" desc = "文件路径">
+    <param id="1"  key ="FilePath1" value=""/>
+    <param id="2"  key ="FilePath2" value=""/>
+    <param id="3"  key ="FilePath3" value=""/>
+  </params>
+  <params id="10"  name="c" desc = "c">
+    <param id="4"  key ="dns2" value="8.8.8.8"/>
+  </params>
+  <params id="11"  name="d" desc = "d">
+    <param id="41"  key ="p1" value="8.8.8.8"/>
+    <param id="42" key ="p2" value="8.8.8.8"/>
+    <param id="43" key ="p3" value="8.8.8.8"/>
+    <param id="44" key ="p4" value="8.8.8.8"/>
+  </params>
+</ArrayOfParams>

@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8305A738-94B0-4984-8CBB-22CFC1E901B7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ChinaTtlWifi</RootNamespace>
+    <AssemblyName>ChinaTtlWifi</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Apache.NMS, Version=1.7.1.3894, Culture=neutral, PublicKeyToken=82756feee3957618, processorArchitecture=MSIL">
+      <HintPath>..\packages\Apache.NMS.1.7.1\lib\net40\Apache.NMS.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Apache.NMS.ActiveMQ, Version=1.7.2.4108, Culture=neutral, PublicKeyToken=82756feee3957618, processorArchitecture=MSIL">
+      <HintPath>..\packages\Apache.NMS.ActiveMQ.1.7.2\lib\net40\Apache.NMS.ActiveMQ.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAction.Designer.cs">
+      <DependentUpon>FormAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormActionNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormActionNew.Designer.cs">
+      <DependentUpon>FormActionNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBase.Designer.cs">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChannel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChannel.Designer.cs">
+      <DependentUpon>FormChannel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChannelNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChannelNew.Designer.cs">
+      <DependentUpon>FormChannelNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEutInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEutInfo.Designer.cs">
+      <DependentUpon>FormEutInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormEutManage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEutManage.Designer.cs">
+      <DependentUpon>FormEutManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormHelper.cs" />
+    <Compile Include="FormMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain.Designer.cs">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormParam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormParam.Designer.cs">
+      <DependentUpon>FormParam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormParamM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormParamM.Designer.cs">
+      <DependentUpon>FormParamM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormParamNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormParamNew.Designer.cs">
+      <DependentUpon>FormParamNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormResult.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormResult.Designer.cs">
+      <DependentUpon>FormResult.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormScript.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormScript.Designer.cs">
+      <DependentUpon>FormScript.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormScriptNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormScriptNew.Designer.cs">
+      <DependentUpon>FormScriptNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormStep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormStep.Designer.cs">
+      <DependentUpon>FormStep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTask.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTask.Designer.cs">
+      <DependentUpon>FormTask.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTaskEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTaskEdit.Designer.cs">
+      <DependentUpon>FormTaskEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTest.Designer.cs">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyGridView.Designer.cs">
+      <DependentUpon>MyGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MyToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyToolStrip.Designer.cs">
+      <DependentUpon>MyToolStrip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowMessage.cs" />
+    <EmbeddedResource Include="FormAction.resx">
+      <DependentUpon>FormAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormActionNew.resx">
+      <DependentUpon>FormActionNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChannel.resx">
+      <DependentUpon>FormChannel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChannelNew.resx">
+      <DependentUpon>FormChannelNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEutInfo.resx">
+      <DependentUpon>FormEutInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEutManage.resx">
+      <DependentUpon>FormEutManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain.resx">
+      <DependentUpon>FormMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormParam.resx">
+      <DependentUpon>FormParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormParamM.resx">
+      <DependentUpon>FormParamM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormParamNew.resx">
+      <DependentUpon>FormParamNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormResult.resx">
+      <DependentUpon>FormResult.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormScript.resx">
+      <DependentUpon>FormScript.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormScriptNew.resx">
+      <DependentUpon>FormScriptNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormStep.resx">
+      <DependentUpon>FormStep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTask.resx">
+      <DependentUpon>FormTask.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTaskEdit.resx">
+      <DependentUpon>FormTaskEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTest.resx">
+      <DependentUpon>FormTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FlowConfig\actions.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="FlowConfig\cases\test1\case.xml" />
+    <Content Include="FlowConfig\cases\wifi互操作性测试\case.xml" />
+    <Content Include="FlowConfig\channels.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="FlowConfig\params.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\Test.ico" />
+    <Content Include="resources\任务开始.png" />
+    <None Include="resources\删 除.png" />
+    <None Include="resources\删 除1.png" />
+    <None Include="resources\文件夹 %281%29.png" />
+    <None Include="resources\修改 %281%29.png" />
+    <None Include="resources\修改.png" />
+    <None Include="resources\增加.png" />
+    <None Include="resources\报告.png" />
+    <Content Include="resources\暂停任务.png" />
+    <Content Include="resources\查看结果.png" />
+    <Content Include="resources\测试.png" />
+    <None Include="resources\添加.png" />
+    <Content Include="resources\清除.png" />
+    <None Include="resources\设备.png" />
+    <None Include="resources\选择.png" />
+    <Content Include="resources\选择任务调度.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChinaTtlWifi.Base\ChinaTtlWifi.Base.csproj">
+      <Project>{7d899590-bf68-448d-976b-99d379240a36}</Project>
+      <Name>ChinaTtlWifi.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaTtlWifi.Bll\ChinaTtlWifi.Bll.csproj">
+      <Project>{4c60825d-464e-458f-a151-d093bf2a38f4}</Project>
+      <Name>ChinaTtlWifi.Bll</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChinaTtlWifi.Entity\ChinaTtlWifi.Entity.csproj">
+      <Project>{5df78db4-83d2-467a-89e1-9a7566cfc41e}</Project>
+      <Name>ChinaTtlWifi.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CommonConfig\CommonConfig.csproj">
+      <Project>{24c368c8-25c9-4522-ae31-5bd1cdb6b286}</Project>
+      <Name>CommonConfig</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Wims.Common\Wims.Common.csproj">
+      <Project>{b7e4a21d-2adf-4494-9e5e-c90dbd08f7cd}</Project>
+      <Name>Wims.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MqUtil\MqUtil.csproj">
+      <Project>{48cebaaa-637d-4bd3-a101-7b51ad12f2ab}</Project>
+      <Name>MqUtil</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

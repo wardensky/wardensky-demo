@@ -1,0 +1,6 @@
+<case id="2" name="wifi互操作性测试"  desc ="aa" limit="200">
+  <step id="2" name="设置WirelessMode" action="5" paramsId="1" channel="2"  condition="" nextStep="3"></step>
+  <step id="3" name="连接AP" action="6" paramsId="1" channel="2"  condition="" nextStep="99"></step>
+  <step id="4" name="测试吞吐量" action="4" paramsId="1" channel="4"  condition="" nextStep="99"></step>
+  <step id="99" name="end test"></step>
+</case>

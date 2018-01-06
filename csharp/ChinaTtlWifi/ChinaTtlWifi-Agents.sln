@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentAp", "AgentAp\AgentAp.csproj", "{A8E33D1E-4ACF-44E4-87B6-2D223E95D620}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentStation", "AgentStation\AgentStation.csproj", "{8E1A6129-276C-4C8D-8159-81254C911636}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentTest1", "AgentTest1\AgentTest1.csproj", "{4B344944-7C24-449C-BDE8-8E2023BFC2FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentChariot", "AgentSniffer\AgentChariot.csproj", "{8FAD22C9-3728-4F51-9720-FD7EE367A652}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentUtil", "AgentUtil\AgentUtil.csproj", "{5E37FBD6-ED89-460D-9F01-12E1A25E6E5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgentIperf", "AgentIperf1\AgentIperf.csproj", "{7ABD535F-C6AD-4FD5-94A8-52A309B3D2B4}"
+EndProject
+Global
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A8E33D1E-4ACF-44E4-87B6-2D223E95D620}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8E33D1E-4ACF-44E4-87B6-2D223E95D620}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8E33D1E-4ACF-44E4-87B6-2D223E95D620}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8E33D1E-4ACF-44E4-87B6-2D223E95D620}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E1A6129-276C-4C8D-8159-81254C911636}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E1A6129-276C-4C8D-8159-81254C911636}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E1A6129-276C-4C8D-8159-81254C911636}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E1A6129-276C-4C8D-8159-81254C911636}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B344944-7C24-449C-BDE8-8E2023BFC2FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B344944-7C24-449C-BDE8-8E2023BFC2FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B344944-7C24-449C-BDE8-8E2023BFC2FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B344944-7C24-449C-BDE8-8E2023BFC2FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FAD22C9-3728-4F51-9720-FD7EE367A652}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FAD22C9-3728-4F51-9720-FD7EE367A652}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FAD22C9-3728-4F51-9720-FD7EE367A652}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FAD22C9-3728-4F51-9720-FD7EE367A652}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E37FBD6-ED89-460D-9F01-12E1A25E6E5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E37FBD6-ED89-460D-9F01-12E1A25E6E5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E37FBD6-ED89-460D-9F01-12E1A25E6E5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E37FBD6-ED89-460D-9F01-12E1A25E6E5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ABD535F-C6AD-4FD5-94A8-52A309B3D2B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ABD535F-C6AD-4FD5-94A8-52A309B3D2B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ABD535F-C6AD-4FD5-94A8-52A309B3D2B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ABD535F-C6AD-4FD5-94A8-52A309B3D2B4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

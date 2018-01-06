@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<ArrayOfGlobalConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <GlobalConfig>
+    <MQ_URL>activemq:failover:(tcp://192.165.112.123:61616?maxInactivityDurationInitalDelay=30000)</MQ_URL>
+    <!--<MQ_URL>activemq:failover:(tcp://127.0.0.1:61616?maxInactivityDurationInitalDelay=30000)</MQ_URL>-->
+    <MONGO_URL>mongodb://192.165.112.123/chinattl</MONGO_URL>
+    <!--<MONGO_URL>mongodb://127.0.0.1/chinattl</MONGO_URL>-->
+    <AGENT_NAME>AGENT_AP</AGENT_NAME>
+  </GlobalConfig>
+</ArrayOfGlobalConfig>

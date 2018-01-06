@@ -1,0 +1,12 @@
+<case id="1" name="test" desc ="aa" limit="3.66,3.70,0.64">
+  <step id="1" name="初始化AP" action="1" paramsId="1" channel = "3"  condition="" nextStep="2"></step>
+  <step id="2" name="查看是否有BEACON帧" action="2" paramsId="2" channel = "2"  condition="" nextStep="3"></step>
+  <step id="3" name="Station参数配置" action="3" paramsId="3" channel = "1"  condition="" nextStep="4"></step>
+  <step id="4" name="Station上线" action="4" paramsId="4" channel = "3"  condition="" nextStep="5"></step>
+  <step id="5" name="sniffer抓取AssociationRequest包" action="5" paramsId="5" channel = "2"  condition="" nextStep="6"></step>
+  <step id="6" name="Ping命令查看丢包率" action="6" paramsId="6" channel = "1"  condition="" nextStep="7"></step>
+  <step id="7" name="选择chariot脚本测试吞吐量" action="7" paramsId="7" channel = "3"  condition="" nextStep="8"></step>
+  <step id="8" name="sniffer查看是否有数据帧" action="8" paramsId="8" channel = "2"  condition="" nextStep="9"></step>
+  <step id="9" name="检查测试结果" action="9" paramsId="9" channel = "3"  condition="" nextStep="99"></step>
+  <step id="99" name="end test"></step>
+</case>

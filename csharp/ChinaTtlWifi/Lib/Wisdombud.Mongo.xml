@@ -1,0 +1,253 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Wisdombud.Mongo</name>
+    </assembly>
+    <members>
+        <member name="T:Wisdombud.Mongo.EncryptAttribute">
+            <summary>
+            </summary>
+        </member>
+        <member name="M:Wisdombud.Mongo.IBaseDao`2.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                Counts the specified condition.
+            </summary>
+            <param name="condition">The condition.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.IBaseDao`2.Count">
+            <summary>
+                Count all elements
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.IBaseDao`2.Delete(`0)">
+            <summary>
+                Deletes the Entity.
+            </summary>
+            <param name="pobject">The pobject.</param>
+        </member>
+        <member name="M:Wisdombud.Mongo.IBaseDao`2.Delete(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                Deletes the Entities.
+            </summary>
+            <param name="condition">The condition.</param>
+        </member>
+        <member name="M:Wisdombud.Mongo.IBaseDao`2.DeleteAll">
+            <summary>
+                Deletes All.
+            </summary>
+        </member>
+        <member name="M:Wisdombud.Mongo.IBaseDao`2.GetAll">
+            <summary>
+                Gets all Entities.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.IBaseDao`2.GetAll(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                Gets all Entities by condition.
+            </summary>
+            <param name="condition">The condition.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.IBaseDao`2.GetAll(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Boolean)">
+            <summary>
+                GetAll by query
+            </summary>
+            <param name="condition"></param>
+            <param name="top">TOP Clause, if is [0] will be ignored</param>
+            <param name="orderByDescending">If is [true] order by desc - If is [false] order by asc</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.IBaseDao`2.GetByCondition(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                Gets the first Entity by condition.
+            </summary>
+            <param name="condition">The condition.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.IBaseDao`2.GetById(`1)">
+            <summary>
+                Gets the Entity by ID.
+            </summary>
+            <param name="id">The id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.IBaseDao`2.GetFirst(System.String,System.String)">
+            <summary>
+                查找第一个满足条件的T
+            </summary>
+            <param name="field">字段名称</param>
+            <param name="search">字段值</param>
+            <returns>查找到的T 如果不存在为null</returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.IBaseDao`2.Paginate``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32,System.Int64@,System.Func{`0,``0},System.Boolean)">
+            <summary>
+                Paginates the specified func.
+            </summary>
+            <param name="condition">The func.</param>
+            <param name="pagesize">The pagesize.</param>
+            <param name="page">The page.</param>
+            <param name="pOrderByClause"></param>
+            <param name="pOrderByDescending">if set to <c>true</c> [p order by descending].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.IBaseDao`2.Paginate``1(System.Int32,System.Int32,System.Func{`0,``0},System.Boolean)">
+            <summary>
+                Paginates the specified func.
+            </summary>
+            <param name="pagesize">The pagesize.</param>
+            <param name="page">The page.</param>
+            <param name="pOrderByClause"></param>
+            <param name="pOrderByDescending">if set to <c>true</c> [p order by descending].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.IBaseDao`2.Save(`0)">
+            <summary>
+                Saves the Entity.
+            </summary>
+            <param name="pobject">The p object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.IBaseDao`2.Search(System.String,System.String,System.Int32,System.Int32,System.Int64@)">
+            <summary>
+                Seach using 'text' command
+            </summary>
+            <param name="field"></param>
+            <param name="search"></param>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+            <param name="foundedRecords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.IBaseDao`2.Search_And(System.Collections.Generic.IDictionary{System.String,System.String},System.Int32,System.Int32,System.Int64@)">
+            <summary>
+                Seach using 'text' command based in key value pairs And Clause
+            </summary>
+            <param name="keysAndValues"></param>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+            <param name="foundedRecords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.IBaseDao`2.Search_Or(System.Collections.Generic.IDictionary{System.String,System.String},System.Int32,System.Int32,System.Int64@)">
+            <summary>
+                Seach using 'text' command based in key value pairs Or Clause
+            </summary>
+            <param name="keysAndValues"></param>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+            <param name="foundedRecords"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.MongoDbBaseDao`1.#ctor(System.String)">
+            <summary>
+                Initializes a new instance of the <see cref="T:Wisdombud.Mongo.MongoDbBaseDao`1"/> class.
+            </summary>
+            <param name="pConnectionstring">The connection string.</param>
+            <example>mongodb://localhost/database_name</example>
+        </member>
+        <member name="M:Wisdombud.Mongo.MongoDbBaseDao`1.Count(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                Counts the specified condition.
+            </summary>
+            <param name="condition">The condition.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.MongoDbBaseDao`1.Count">
+            <summary>
+                Count all elements
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.MongoDbBaseDao`1.Delete(`0)">
+            <summary>
+                Deletes the specified object.
+            </summary>
+            <param name="pobject">The object.</param>
+        </member>
+        <member name="M:Wisdombud.Mongo.MongoDbBaseDao`1.Delete(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                Deletes the specified object.
+            </summary>
+            <param name="condition"></param>
+        </member>
+        <member name="M:Wisdombud.Mongo.MongoDbBaseDao`1.GetAll">
+            <summary>
+                Gets all.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.MongoDbBaseDao`1.GetAll(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                Gets all using a condition.
+            </summary>
+            <param name="condition">The condition.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.MongoDbBaseDao`1.GetAll(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Boolean)">
+            <summary>
+                Gets all using a condition, a TOP clause and an optional orderBy clause.
+            </summary>
+            <param name="condition">The condition.</param>
+            <param name="maxresult">The max result.</param>
+            <param name="orderByDescending">if set to <c>true</c> [order by descending].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.MongoDbBaseDao`1.GetByCondition(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}})">
+            <summary>
+                Gets the by condition.
+            </summary>
+            <param name="condition">The condition.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.MongoDbBaseDao`1.GetById(System.String)">
+            <summary>
+                Gets the by MongoId.
+            </summary>
+            <param name="MongoId">The _id.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.MongoDbBaseDao`1.Paginate``1(System.Linq.Expressions.Expression{System.Func{`0,System.Boolean}},System.Int32,System.Int32,System.Int64@,System.Func{`0,``0},System.Boolean)">
+            <summary>
+                Paginates by an specified condition.
+            </summary>
+            <param name="condition">The condition.</param>
+            <param name="pagesize">The page size.</param>
+            <param name="page">The page.</param>
+            <param name="pOrderByClause">The OrderBy Clause.</param>
+            <param name="pOrderByDescending">if set to <c>true</c> [order by descending].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.MongoDbBaseDao`1.Paginate``1(System.Int32,System.Int32,System.Func{`0,``0},System.Boolean)">
+            <summary>
+                Paginates by an specified condition.
+            </summary>
+            <param name="pagesize">The page size.</param>
+            <param name="page">The page.</param>
+            <param name="pOrderByClause">The OrderBy Clause.</param>
+            <param name="pOrderByDescending">if set to <c>true</c> [order by descending].</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.MongoDbBaseDao`1.Save(`0)">
+            <summary>
+                Saves the specified object.
+            </summary>
+            <param name="pobject">The object.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Wisdombud.Mongo.MongoDbBaseDao`1.Search(System.String,System.String,System.Int32,System.Int32,System.Int64@)">
+            <summary>
+                Search indexes
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="field"></param>
+            <param name="search">The search value</param>
+            <param name="page"></param>
+            <param name="pagesize"></param>
+            <param name="foundedRecords">total number of founded records in index</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
