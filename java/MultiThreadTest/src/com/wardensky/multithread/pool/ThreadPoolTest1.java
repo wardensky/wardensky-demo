@@ -1,4 +1,4 @@
-package com.wardensky.test;
+package com.wardensky.multithread.pool;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

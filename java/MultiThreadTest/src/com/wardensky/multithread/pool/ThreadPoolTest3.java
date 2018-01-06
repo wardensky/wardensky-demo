@@ -1,4 +1,4 @@
-package com.wardensky.test;
+package com.wardensky.multithread.pool;
 
 import java.util.concurrent.ScheduledThreadPoolExecutor;
 import java.util.concurrent.ThreadFactory;

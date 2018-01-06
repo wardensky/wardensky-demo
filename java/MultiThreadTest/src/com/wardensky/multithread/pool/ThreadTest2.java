@@ -1,4 +1,4 @@
-package com.wardensky.test;
+package com.wardensky.multithread.pool;
 
 public class ThreadTest2 {
 	public static void main(String[] args) {

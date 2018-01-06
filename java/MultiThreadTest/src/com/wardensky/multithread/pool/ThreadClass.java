@@ -1,4 +1,4 @@
-package com.wardensky.test;
+package com.wardensky.multithread.pool;
 
 public class ThreadClass extends Thread {
 	int count = 0;
