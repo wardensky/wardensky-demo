@@ -1,0 +1,6 @@
+c:\users\administrator\documents\visual studio 2013\Projects\xmldb\xmldb\bin\Debug\xmldb.exe.config
+c:\users\administrator\documents\visual studio 2013\Projects\xmldb\xmldb\bin\Debug\xmldb.exe
+c:\users\administrator\documents\visual studio 2013\Projects\xmldb\xmldb\bin\Debug\xmldb.pdb
+c:\users\administrator\documents\visual studio 2013\Projects\xmldb\xmldb\obj\Debug\xmldb.csprojResolveAssemblyReference.cache
+c:\users\administrator\documents\visual studio 2013\Projects\xmldb\xmldb\obj\Debug\xmldb.exe
+c:\users\administrator\documents\visual studio 2013\Projects\xmldb\xmldb\obj\Debug\xmldb.pdb
