@@ -1,9 +1,20 @@
-# Compiled class file
+
+# svn
+
+.svn
+
+# csharp projects
+*.sln
+.bin
+.debug
+.obj
+
+# java projects
 *.class
 .project
 .setting
 
-.svn
+
 # Log file
 *.log
 
