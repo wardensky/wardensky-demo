@@ -1,7 +1,10 @@
 package com.wardensky.wordpresshelper;
 
+import com.google.inject.Singleton;
+
+@Singleton
 public class RemoteWpPostsSrv extends AbstractWppostsSrv {
-	public static final RemoteWpPostsSrv SRV = new RemoteWpPostsSrv();
+	 
 	final String GUID_PREFIX = "http://www.happykeke.top/?p=";
 
 	@Override

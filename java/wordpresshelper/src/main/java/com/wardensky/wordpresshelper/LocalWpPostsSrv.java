@@ -1,7 +1,10 @@
 package com.wardensky.wordpresshelper;
 
+import com.google.inject.Singleton;
+
+@Singleton
 public class LocalWpPostsSrv extends AbstractWppostsSrv {
-	public static final LocalWpPostsSrv SRV = new LocalWpPostsSrv();
+	 
 	final String GUID_PREFIX = "http://localhost/wordpress/?p=";
 	@Override
 	public void changeDb() {
