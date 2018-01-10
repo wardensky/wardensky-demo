@@ -1,8 +1,0 @@
-C:\Users\zch\github\wardensky-demo\csharp\xmldb\FileDbTest\bin\Debug\FileDbTest.exe.config
-C:\Users\zch\github\wardensky-demo\csharp\xmldb\FileDbTest\bin\Debug\FileDbTest.exe
-C:\Users\zch\github\wardensky-demo\csharp\xmldb\FileDbTest\bin\Debug\FileDbTest.pdb
-C:\Users\zch\github\wardensky-demo\csharp\xmldb\FileDbTest\bin\Debug\xmldb.pdb
-C:\Users\zch\github\wardensky-demo\csharp\xmldb\FileDbTest\obj\Debug\FileDbTest.csprojResolveAssemblyReference.cache
-C:\Users\zch\github\wardensky-demo\csharp\xmldb\FileDbTest\obj\Debug\FileDbTest.exe
-C:\Users\zch\github\wardensky-demo\csharp\xmldb\FileDbTest\obj\Debug\FileDbTest.pdb
-C:\Users\zch\github\wardensky-demo\csharp\xmldb\FileDbTest\bin\Debug\xmldb.dll

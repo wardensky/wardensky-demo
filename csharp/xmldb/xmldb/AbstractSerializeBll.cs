@@ -134,7 +134,6 @@ namespace wardensky.xmldb
         }
         public List<T> SelectAll()
         {
-            this.ReadDb();
             return this.entityList;
         }
         public void DeleteAll()

@@ -1,6 +1,0 @@
-C:\Users\zch\github\wardensky-demo\csharp\xmldb\xmldb\bin\Debug\xmldb.pdb
-C:\Users\zch\github\wardensky-demo\csharp\xmldb\xmldb\obj\Debug\xmldb.csprojResolveAssemblyReference.cache
-C:\Users\zch\github\wardensky-demo\csharp\xmldb\xmldb\obj\Debug\xmldb.pdb
-C:\Users\zch\github\wardensky-demo\csharp\xmldb\xmldb\bin\Debug\xmldb.dll.config
-C:\Users\zch\github\wardensky-demo\csharp\xmldb\xmldb\bin\Debug\xmldb.dll
-C:\Users\zch\github\wardensky-demo\csharp\xmldb\xmldb\obj\Debug\xmldb.dll
