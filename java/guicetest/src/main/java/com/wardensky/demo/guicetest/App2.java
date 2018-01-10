@@ -1,23 +1,16 @@
 package com.wardensky.demo.guicetest;
 
 import com.google.inject.Guice;
-import com.google.inject.Inject;
 import com.google.inject.Injector;
 import com.google.inject.Singleton;
 
 @Singleton
-public class App {
-	@Inject
-	private HelloPrinter printer;
-
-	public void hello() {
-		printer.print();
-	}
+public class App2 {
 
 	public static void main(String[] args) {
+		//这个代码必须有
 		Injector injector = Guice.createInjector();
-		App sample = injector.getInstance(App.class);
-		sample.hello();
+		HelloPrinter printer = injector.getInstance(HelloPrinter.class);
+		printer.print();
 	}
 }
- 

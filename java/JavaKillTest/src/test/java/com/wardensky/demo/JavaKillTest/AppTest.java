@@ -1,4 +1,4 @@
-package com.wisdombud.chzhao.mqtest;
+package com.wardensky.demo.JavaKillTest;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

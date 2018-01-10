@@ -67,8 +67,6 @@ public abstract class MqServer extends MqAbstractBase implements MessageListener
 		}
 	}
 
-
-
 	public abstract String handleMsg(String json);
 
 	public void close() throws JMSException {
