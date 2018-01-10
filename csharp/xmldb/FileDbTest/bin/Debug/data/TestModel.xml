@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ArrayOfTestModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestModel>
+    <Id>90639f28-4256-4e7e-a25e-657798d187b8</Id>
+    <Name>keke</Name>
+    <Age>10</Age>
+  </TestModel>
+</ArrayOfTestModel>
