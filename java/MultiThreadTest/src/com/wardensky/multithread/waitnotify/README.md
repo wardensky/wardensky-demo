@@ -1,4 +1,4 @@
-# 这个包说明线程中wait/notify/notifyAll的用法。
+# 这个包说明线程中wait/notify/notifyAll的用法
 
 ## 前言
 多线程时，最关注的就是线程同步，线程间的同步一般用锁来实现，常见的锁就是synchronized和lock。用了synchronized，就不得不提到wait/notify/notifyAll。本文介绍这三者是什么东西。
@@ -415,4 +415,5 @@ synchronized(obj)一个代码段，意思是下面```{} ```里面的代码执行
 - wait方法在进入wait状态的时候会释放对象的锁
 - wait方法是针对一个被同步代码块加锁的对象
 - sleep方法和多线程没有直接关系，跟锁也没有关系
+- wait释放锁，notify和notifyAll不释放锁
 
