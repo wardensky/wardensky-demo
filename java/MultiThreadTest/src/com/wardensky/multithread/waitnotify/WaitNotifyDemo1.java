@@ -57,7 +57,7 @@ class Thread1_2 extends Thread {
 				WaitNotifyDemo1.obj.wait();
 				System.out.println(this.name + " Finish wait");
 				// 如果不加这句话，就叫不醒别人了。
-				// WaitNotifyDemo.obj.notify();
+				WaitNotifyDemo1.obj.notify();
 			}
 
 		} catch (InterruptedException e1) {

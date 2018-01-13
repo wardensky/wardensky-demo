@@ -12,8 +12,8 @@ public class WaitNotifyDemo0 {
 		Thread0_2 t2 = new Thread0_2("Thread Apple");
 		t2.start();
 		///这个sleep很重要。
-		Thread.sleep(1);
-		t1.start();
+		//Thread.sleep(1);
+		//t1.start();
 		System.out.println("完成");
 	}
 }
@@ -66,11 +66,12 @@ class Thread0_2 extends Thread {
 	public void run() {
 		try {
 			System.out.println("I'm " + this.name + " . I'm waiting");
+			// WaitNotifyDemo0.obj.wait();
 			synchronized (WaitNotifyDemo0.obj) {
-				WaitNotifyDemo0.obj.wait();
+			 	WaitNotifyDemo0.obj.wait();
 				System.out.println(this.name + " Finish wait");
 			}
-		} catch (InterruptedException e1) {
+		} catch (Exception e1) {
 			e1.printStackTrace();
 		}
 	}
