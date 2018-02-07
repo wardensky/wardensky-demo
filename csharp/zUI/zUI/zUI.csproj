@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22EEAAD0-E65F-4637-B5DC-1EF953A96E8B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>wardensky.zUI</RootNamespace>
+    <AssemblyName>wardensky.zUI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zFileDb, Version=2.1.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\zFileDb.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBaseNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCrud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RowEntity.cs" />
+    <Compile Include="UCBaseNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCProjectRowComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRowComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRowDateTime.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCRowTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WimsGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WimsToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="zUIGridViewNew.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="zUIGridViewNew.designer.cs">
+      <DependentUpon>zUIGridViewNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zUIToolStripNew.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="zUIToolStripNew.Designer.cs">
+      <DependentUpon>zUIToolStripNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBaseNew.resx">
+      <DependentUpon>FormBaseNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCBaseNew.resx">
+      <DependentUpon>UCBaseNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCProjectRowComboBox.resx">
+      <DependentUpon>UCProjectRowComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRowComboBox.resx">
+      <DependentUpon>UCRowComboBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRowDateTime.resx">
+      <DependentUpon>UCRowDateTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCRowTextBox.resx">
+      <DependentUpon>UCRowTextBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCSearch.resx">
+      <DependentUpon>UCSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lib\zFileDb.dll" />
+    <Content Include="Resources\修改.png" />
+    <None Include="README.md" />
+    <None Include="Resources\删除.png" />
+    <Content Include="Resources\增加.png" />
+    <Content Include="Resources\报告.png" />
+    <None Include="Resources\文件夹.png" />
+    <Content Include="Resources\添加.png" />
+    <Content Include="Resources\设备.png" />
+    <Content Include="Resources\选择.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
