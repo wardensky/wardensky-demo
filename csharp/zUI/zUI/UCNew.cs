@@ -1,13 +1,11 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Reflection;
 using System.Windows.Forms;
- 
+
 namespace wardensky.zUI
 {
-    public partial class UCBaseNew<T> : UserControl  
+    public class UCNew<T> : UCSingleModel<T>
     {
         /// <summary> 
         /// 必需的设计器变量。
@@ -57,14 +55,8 @@ namespace wardensky.zUI
             this.ResumeLayout(false);
         }
         #endregion
-        public System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        public List<string> ignoreFields = new List<string>() { "RE1", "RE2", "Id", "id", "MongoId" };
-        //public Dictionary<string, List<object>> comboList { get; set; }
 
-
-
-        public T Entity { get; set; }
-        public UCBaseNew()
+        public UCNew()
         {
             InitializeComponent();
             this.Dock = DockStyle.Fill;
@@ -141,45 +133,14 @@ namespace wardensky.zUI
             {
                 return;
             }
+
         }
         public void Init()
         {
-            List<RowEntity> list = GenReflectElements();
+            List<RowEntity> list = GenricReflectToolkit.GenReflectElements<T>(this.Entity, this.ignoreFields);
             this.Init(list);
         }
-        public List<RowEntity> GenReflectElements()
-        {
-            List<RowEntity> list = new List<RowEntity>();
-            if (this.Entity == null)
-            {
-                this.Entity = System.Activator.CreateInstance<T>();
-            }
-            int index = 1;
-            Type type = typeof(T);
-            foreach (PropertyInfo pi in type.GetProperties())
-            {
-                if (this.ignoreFields.Contains(pi.Name))
-                {
-                    continue;
-                }
-                RowEntity row = new RowEntity();
-                list.Add(row);
-                object[] objs = pi.GetCustomAttributes(typeof(DescriptionAttribute), true);
-                string descName = objs.Length > 0 ? ((DescriptionAttribute)objs[0]).Description : pi.Name;
-                row.Key = pi.Name;
-                row.Name = descName;
-                row.Value = pi.GetValue(this.Entity, null) ?? string.Empty;
-                row.Index = index++;
-                row.Type = ControlType.TEXT_BOX;
-                if (pi.PropertyType == typeof(DateTime))
-                {
-                    row.Type = ControlType.DATE_TIME;
-                }
-                row.DataType = pi.PropertyType;
 
-            }
-            return list;
-        }
         public void Init(List<RowEntity> list)
         {
             this.Init(list, null);

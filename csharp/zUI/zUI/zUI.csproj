@@ -49,23 +49,23 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="zFileDb, Version=2.1.0.1, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>Lib\zFileDb.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormBaseNew.cs">
+    <Compile Include="FormNew.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCrud.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="GenricReflectToolkit.cs" />
     <Compile Include="RowEntity.cs" />
-    <Compile Include="UCBaseNew.cs">
+    <Compile Include="UCNew.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCNewWithComboBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCProjectRowComboBox.cs">
@@ -81,6 +81,9 @@
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UCSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCSingleModel.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="WimsGridView.cs">
@@ -105,16 +108,16 @@
     <EmbeddedResource Include="FormBase.resx">
       <DependentUpon>FormBase.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormBaseNew.resx">
-      <DependentUpon>FormBaseNew.cs</DependentUpon>
+    <EmbeddedResource Include="FormNew.resx">
+      <DependentUpon>FormNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="UCBaseNew.resx">
-      <DependentUpon>UCBaseNew.cs</DependentUpon>
+    <EmbeddedResource Include="UCNew.resx">
+      <DependentUpon>UCNew.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UCProjectRowComboBox.resx">
       <DependentUpon>UCProjectRowComboBox.cs</DependentUpon>
@@ -161,6 +164,12 @@
     <Content Include="Resources\添加.png" />
     <Content Include="Resources\设备.png" />
     <Content Include="Resources\选择.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\zFileDb\zFileDb\zFileDb.csproj">
+      <Project>{44d586a8-d48c-4344-a6df-9d063653fd55}</Project>
+      <Name>zFileDb</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

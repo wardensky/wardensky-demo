@@ -8,8 +8,11 @@ using wardensky.zFileDb;
 
 namespace wardensky.zUI
 {
-    public abstract class FormCrud<T> : FormBase where T:new()
+    public class FormCrud<T> : FormBase where T : new()
     {
+
+      
+
         protected static readonly log4net.ILog logger = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         protected System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
@@ -17,8 +20,8 @@ namespace wardensky.zUI
         protected WimsGridView myGridView1;
         protected System.ComponentModel.IContainer components = null;
         protected UCSearch<T> ucSearch;
-        public static IFileDbBll<T> bll = null;
-        protected FormBaseNew<T> formNew;
+        protected IFileDbBll<T> bll = FileBllFactory<T>.GetBinaryBll();
+        protected FormNew<T> formNew;
         public Action<object, EventArgs> ActionClickCustom1 { get; set; }
 
         public string TextCustom1 { get; set; }
@@ -63,7 +66,7 @@ namespace wardensky.zUI
         {
             this.Width = 1024;
             this.Height = 633;
-
+            this.InitializeComponent();
         }
         protected virtual void LoadData()
         {
@@ -74,7 +77,7 @@ namespace wardensky.zUI
             }
             else
             {
-           //     dataList = bll.SelectAll().AsQueryable().OrderBy(this.OrderProperty).ToList();
+                //          dataList = bll.SelectAll().AsQueryable().OrderBy(this.OrderProperty).ToList();
             }
             this.myGridView1.LoadData(dataList, base.ignoreFields);
         }
@@ -177,7 +180,7 @@ namespace wardensky.zUI
 
 
 
-        protected virtual void Form_Load(object sender, EventArgs e)
+        protected void Form_Load(object sender, EventArgs e)
         {
             this.Width = 1024;
             this.Height = 633;
@@ -204,12 +207,15 @@ namespace wardensky.zUI
         {
             try
             {
-                if (this.formNew != null)
+                if (this.formNew == null)
                 {
-                    this.formNew.Entity = this.myGridView1.FindFirstSelect<T>();
-                    this.formNew.ShowDialog();
-                    this.LoadData();
+                    this.formNew = new FormNew<T>();
                 }
+
+                this.formNew.Entity = this.myGridView1.FindFirstSelect<T>();
+                this.formNew.ShowDialog();
+                this.LoadData();
+
 
             }
             catch (Exception ex)
@@ -221,12 +227,14 @@ namespace wardensky.zUI
 
         protected virtual void ClickAdd(object arg1, EventArgs arg2)
         {
-            if (this.formNew != null)
+            if (this.formNew == null)
             {
-                this.formNew.Entity = default(T);
-                this.formNew.ShowDialog();
-                this.LoadData();
+                this.formNew = new FormNew<T>();
             }
+            this.formNew.Entity = default(T);
+            this.formNew.ShowDialog();
+            this.LoadData();
+
         }
 
         protected virtual void ClickSelect(object arg1, EventArgs arg2)

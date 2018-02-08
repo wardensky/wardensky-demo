@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using wardensky.zUI;
+using zUITest;
 
 namespace wardensky.zUITest
 {
@@ -15,6 +17,12 @@ namespace wardensky.zUITest
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FormCrud<Model> form = new FormCrud<Model>();
+            form.ShowDialog();
         }
     }
 }
