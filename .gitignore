@@ -8,6 +8,10 @@
 .bin
 .debug
 .obj
+bin/
+debug/
+obj/
+*.pdb
 
 # java projects
 *.class
