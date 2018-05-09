@@ -5,6 +5,7 @@ package cn.huhutd.tool.encode;
  */
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class WaveService {
 	/**
@@ -38,9 +39,15 @@ public class WaveService {
 	public void sendSignal(short userCode, byte dataCode) {
 
 		short[] recieve = getWave(userCode, dataCode);
+		
 
 	}
 
+	public String abc() {
+		String s = "";
+		return s = "nihao";
+	}
+	
 	/*
 	 * 注释作者：xgh 时间：2017.10.23 作用：得到一段时间内的指定占空比的正弦信号的PCM编码 参数： time ：时间
 	 * percent：指代红外编码的高低电平 返回：编码结果
@@ -185,7 +192,7 @@ public class WaveService {
 	public short[] getWave(short userCode, byte dataCode) {
 		ArrayList<short[]> wave_list = new ArrayList<short[]>();
 		int totalLength = 0;
-	 
+
 		wave_list.add(getleaderCode());
 		wave_list.add(getUserCodeToWave(userCode));
 		wave_list.add(getDataCodeToWave(dataCode));
