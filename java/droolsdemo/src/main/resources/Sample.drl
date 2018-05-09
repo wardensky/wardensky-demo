@@ -1,0 +1,13 @@
+package com.wisdombud
+
+import com.wisdombud.droolsdemo.Message;
+
+rule "Hello world"
+  when
+    m : Message(status == Message.HELLO, message : msg)
+  then
+    System.out.println(message);
+    m.setStatus(Message.BYE);
+    m.setMsg("keke");
+    update(m);
+end
